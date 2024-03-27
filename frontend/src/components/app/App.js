@@ -5,10 +5,11 @@ import LoginForm from '../login-form/LoginForm';
 
 const App = () => {
   const [user, setUser] = useState('');
+
   return (
     <div className={styles.app}>
       {
-        !user ? <LoginForm/> : <Calculator/>
+        !user ? <LoginForm setUser={setUser}/> : <Calculator/>
       }
     </div>
   );
